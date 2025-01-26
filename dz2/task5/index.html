@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проверка палиндрома</title>
+</head>
+<body>
+    <h1>Проверка пятиразрядного числа на палиндром</h1>
+    <button onclick="checkPalindrome()">Проверить</button>
+    <p id="result"></p>
+
+    <script>
+        function checkPalindrome() {
+            let number = prompt("Введите пятиразрядное число:");
+
+            // Проверка на пятиразрядность
+            if (number.length === 5 && !isNaN(number)) {
+                // Проверка на палиндром
+                let reversedNumber = number.split('').reverse().join('');
+                if (number === reversedNumber) {
+                    document.getElementById("result").innerText = number + " является палиндромом.";
+                } else {
+                    document.getElementById("result").innerText = number + " не является палиндромом.";
+                }
+            } else {
+                document.getElementById("result").innerText = "Пожалуйста, введите корректное пятиразрядное число.";
+            }
+        }
+    </script>
+</body>
+</html>
