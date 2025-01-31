@@ -3,16 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Считатель скидки :3</title>
+    <title>Скидка на покупку</title>
 </head>
 <body>
-    
-    <div>
-        <h1>Введите сумму покупки а мы посчитаем вам скидку</h1>
-        <input type="text" id="sum" placeholder="Сумма покупки:">
-        <button id="button">Подтверидить</button>
-    </div>
-    <script src="scripts.js"></script>
-
+    <h1>Калькулятор скидки</h1>
+    <label for="amount"> Введите сумму покупки:</label>
+    <input type="number" id="amount" placheloder="Сумма в рублях">
+    <button onclick="calcuateDiscount()"> Расчитать сумму к оплате</button>
+    <div class="result" id="result"></div>
+    <script src="script.js"></script>
 </body>
 </html>
